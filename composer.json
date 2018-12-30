@@ -1,0 +1,27 @@
+{
+    "name": "datalinx/imgserver",
+    "type": "library",
+    "description": "URL-based image processor and server with Barcode generator",
+    "keywords": [
+        "image",
+        "URL",
+        "barcode"
+    ],
+    "homepage": "https://github.com/datalinx/imgserver",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Omer Sabic",
+            "email": "omer@datalinx.si"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"DataLinx\\ImgServer\\": "src/"
+		}
+	},
+    "require": {
+        "php": ">=7.2",
+        "picqer/php-barcode-generator": "0.2.*"
+    }
+}
