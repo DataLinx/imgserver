@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 require '../vendor/autoload.php';
-require '../config/barcode.config.php';
+//require '../config/barcode.config.php';
 
 use \DataLinx\ImgServer\BarcodeHelper;
 ?>
