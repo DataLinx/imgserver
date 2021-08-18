@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <?php
 require '../vendor/autoload.php';
-//require '../config/barcode.config.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 
 use \DataLinx\ImgServer\BarcodeHelper;
 ?>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Barcode generator view test</title>

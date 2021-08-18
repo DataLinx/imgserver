@@ -368,6 +368,11 @@ class BarcodeHelper
 				case self::FORMAT_HTML:
 					$class = '\Picqer\Barcode\BarcodeGenerator' . strtoupper($format);
 					self::$_generators[$format] = new $class;
+                    if ($format === self::FORMAT_JPG && function_exists('imagecreate'))
+                    {
+                        // For Jpeg, always use GD if available, since with imagick it only shows a completely black block
+                        self::$_generators[$format]->useGd();
+                    }
 					break;
 				default:
 					throw new Exception("Barcode format {$format} is unknown!");
